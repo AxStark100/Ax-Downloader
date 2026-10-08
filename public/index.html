@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ax Download – TikTok Video, Photo &amp; Sound Downloader</title>
+  <meta name="description" content="Ax Download is a free TikTok downloader. Save videos without watermark, photo slideshows and sounds as MP4, JPG or MP3 in Standard or HD quality.">
+  <meta name="color-scheme" content="light dark">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <div class="wrap">
+    <header class="top">
+      <a class="logo" href="/" aria-label="Ax Download home">
+        <span class="logo-mark">Ax</span>
+        <span class="logo-text">Download</span>
+      </a>
+      <nav aria-label="Primary">
+        <a href="#how">How it works</a>
+        <a href="#faq">FAQ</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero">
+        <h1>Download TikTok videos, photos and sounds.</h1>
+        <p class="lead">Paste a link, choose MP4 or MP3, then pick Standard or HD. Free and no sign-up.</p>
+
+        <form id="form" class="search" novalidate>
+          <label class="sr-only" for="url">TikTok link</label>
+          <input id="url" name="url" type="url" inputmode="url" autocomplete="off" autocapitalize="off" spellcheck="false" placeholder="Paste a TikTok link here" required>
+          <button type="button" id="paste" class="btn btn-ghost">Paste</button>
+          <button type="submit" id="submit" class="btn btn-primary">
+            <span class="spinner" aria-hidden="true"></span>
+            <span id="submitLabel">Get</span>
+          </button>
+        </form>
+        <p id="error" class="error" role="alert" hidden></p>
+        <p class="hint">Works with vt.tiktok.com, vm.tiktok.com and tiktok.com/@user/video links.</p>
+      </section>
+
+      <section id="result" class="result" aria-live="polite" hidden>
+        <article class="card">
+          <div class="summary">
+            <div class="cover">
+              <img id="cover" alt="" referrerpolicy="no-referrer">
+              <span id="coverBadge" class="badge"></span>
+            </div>
+            <div class="summary-body">
+              <div class="author">
+                <img id="avatar" alt="" referrerpolicy="no-referrer">
+                <div>
+                  <strong id="nickname"></strong>
+                  <span id="username"></span>
+                </div>
+              </div>
+              <p id="caption" class="caption"></p>
+              <ul class="stats" id="stats"></ul>
+            </div>
+          </div>
+
+          <div class="panel">
+            <div class="tabs" id="tabs" role="tablist" aria-label="Format"></div>
+            <div id="panelBody"></div>
+          </div>
+
+          <dl class="meta" id="meta"></dl>
+        </article>
+      </section>
+
+      <section id="how" class="section">
+        <h2>How it works</h2>
+        <ol class="steps">
+          <li>In TikTok, open a video or photo post, tap <b>Share</b>, then <b>Copy link</b>.</li>
+          <li>Paste the link above and press <b>Get</b>.</li>
+          <li>Choose <b>MP4</b>, <b>Photos</b> or <b>MP3</b>, select <b>Standard</b> or <b>HD</b>, then download.</li>
+        </ol>
+      </section>
+
+      <section id="faq" class="section">
+        <h2>FAQ</h2>
+        <details>
+          <summary>Is Ax Download free?</summary>
+          <p>Yes. There is no account, no limit on file size and no payment.</p>
+        </details>
+        <details>
+          <summary>What is the difference between Standard and HD?</summary>
+          <p>For videos, HD is the higher resolution and bitrate file when TikTok provides one. For photos, HD is the original image and Standard is a lighter 720&nbsp;px JPG.</p>
+        </details>
+        <details>
+          <summary>Why does my link fail?</summary>
+          <p>The post may be private, removed or region-locked. Copy the link again from the TikTok app and retry.</p>
+        </details>
+        <details>
+          <summary>Can I reuse downloaded content?</summary>
+          <p>Downloads are meant for personal use. Respect the creator's rights and do not re-upload their work without permission.</p>
+        </details>
+      </section>
+    </main>
+
+    <footer class="foot">
+      <span>© <span id="year"></span> Ax Download</span>
+      <span>Not affiliated with TikTok or ByteDance.</span>
+    </footer>
+  </div>
+
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <script src="/app.js" defer></script>
+</body>
+</html>
